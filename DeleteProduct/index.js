@@ -3,7 +3,6 @@ const { ObjectID } = require('mongodb');
 
 module.exports = async function (context, req) {
     const { id } = req.params;
-    const product = req.body;
 
     const { client: MongoClient, closeConnectionFn } = await createMongoClient();
     const Products = MongoClient.collection('products');
